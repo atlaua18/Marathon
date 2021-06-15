@@ -2,7 +2,6 @@ const item = document.querySelector(".item");
 const placeholders = document.querySelectorAll(".placeholder");
 
 item.addEventListener("dragstart", dragStart);
-
 item.addEventListener("dragend", dragEnd);
 
 for (const placeholder of placeholders) {
@@ -16,7 +15,6 @@ function dragStart(e) {
     //можно this //можно e.target - это лучше
     e.target.classList.add("hold");
     setTimeout(() => e.target.classList.add("hide"), 0);
-    
 };
 
 function dragEnd(e) {
@@ -25,11 +23,11 @@ function dragEnd(e) {
 
 function dragOver(e) {
     e.preventDefault();
-    // console.log("over");
 };
 function dragEnter(e) {
     e.target.classList.add("hovered");
-    console.log("enter");
+    // console.log("enter");
+    
 };
 function dragLeave(e) {
     e.target.classList.remove("hovered");
