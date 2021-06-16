@@ -18,6 +18,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   max-width: 400px;
+  cursor: url("./src/kitty64px.png"), auto;
 }
 
 .sq {
