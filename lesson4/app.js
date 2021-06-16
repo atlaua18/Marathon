@@ -19,7 +19,7 @@ function setColor(element) {
     const color = getRandomColor()
     element.style.backgroundColor = color;
     element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
-    element.style.cursor = `url("./src/kitty64px.png"), auto`
+    element.style.cursor = `url("./src/kitty32px.png"), auto`
 };
 
 function removeColor(element) {
