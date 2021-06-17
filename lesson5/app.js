@@ -6,6 +6,9 @@ const board = document.querySelector("#board");
 let time = 0;
 let score = 0;
 
+const colors = ["#e2e2df", "#d2d2cf", "#e2cfc4", "#f7d9c4", "#faedcb", "#c9e4de", "#c6def1", "#dbcdf0", "#f2c6de", "#f9c6c9"];
+const shadows = ["#e2e2df", "#d2d2cf", "#e2cfc4", "#f7d9c4", "#faedcb", "#c9e4de", "#c6def1", "#dbcdf0", "#f2c6de", "#f9c6c9"];
+
 startBtn.addEventListener("click", (e) => {
     e.preventDefault();
     screens[0].classList.add("up");
@@ -67,9 +70,23 @@ function createRandomCircle() {
     circle.style.top=`${x}px`;
     circle.style.left=`${y}px`;
 
+    const color = getRandomColor();
+    circle.style.backgroundColor = color;
+
+    const shadow = getRandomShadow();
+    circle.style.boxShadow = `0 0 10px ${shadow}`;
+
     board.append(circle);
 }
 
 function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
 }
+
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+};
+
+function getRandomShadow() {
+    return shadows[Math.floor(Math.random() * shadows.length)];
+};

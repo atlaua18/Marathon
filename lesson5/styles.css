@@ -16,10 +16,25 @@ body {
 a {
   color: #fff;
   text-decoration: none;
+  padding: 10px;
+  border: 1px solid #4a4e69;
+  border-radius: 35px;
+  background-color: #4a4e69;
+  animation: radial-pulse 1.5s infinite;
 }
 
-a:hover {
-  color: #16D9E3;
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0px #22223b;
+  }
+
+  50% {
+    box-shadow: 0 0 40px #22223b;
+  }
+
+  00% {
+    box-shadow: 0 0 0px #22223b;
+  }
 }
 
 .start {
@@ -39,7 +54,7 @@ h1 {
   height: 100vh;
   width: 100vw;
   transition: margin 0.5s ease-out;
-  background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+  background: linear-gradient(90deg, #c9ada7 0%, #f2e9e4 100%);
 }
 
 .screen.up {
@@ -60,7 +75,7 @@ h1 {
 
 .time-btn {
   background-color: transparent;
-  border: 2px solid #C0C0C0;
+  border: 2px solid #8a8989;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
@@ -69,8 +84,8 @@ h1 {
 }
 
 .time-btn:hover {
-  border: 2px solid #16D9E3;
-  color: #16D9E3;
+  border: 2px solid #4a4e69;
+  color: #4a4e69;
 }
 
 .hide {
@@ -78,7 +93,7 @@ h1 {
 }
 
 .primary {
-  color: #16D9E3;
+  color: #4a4e69;
 }
 
 .board {
@@ -88,14 +103,13 @@ h1 {
   position: relative;
   width: 500px;
   height: 500px;
-  background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
-  box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
+  background: linear-gradient(118.38deg, #9a8c98 -4.6%, #c9ada7 200.44%);
+  box-shadow: -8px -8px 20px #4f596444, 10px 7px 20px #47546256;
   border-radius: 30px;
   overflow: hidden;
 }
 
 .circle {
-  background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
